@@ -1,0 +1,18 @@
+.record-button {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.record-button:hover {
+  background-color: #ff7b00;
+}
+
+.record-button.recording {
+  background-color: #dc3545;
+}

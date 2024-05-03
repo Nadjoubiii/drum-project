@@ -1,0 +1,59 @@
+/* MyButton.css */
+
+.custom-button {
+  --blink-color-1: #ff0000; /* Define custom colors */
+  --blink-color-2: #00ff00;
+  --blink-color-3: #0000ff;
+  --blink-color-4: #ffff00;
+  --blink-color-5: #ff00ff;
+
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease; /* Add transitions */
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-button:active {
+  animation: bounce 0.1s ease, blink 0.5s infinite alternate; /* Apply bounce and blink animations when button is clicked */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: var(--blink-color-1);
+  } /* Start with a different color */
+  20% {
+    background-color: var(--blink-color-2);
+  } /* Alternate colors */
+  40% {
+    background-color: var(--blink-color-3);
+  }
+  60% {
+    background-color: var(--blink-color-4);
+  }
+  80% {
+    background-color: var(--blink-color-5);
+  }
+  100% {
+    background-color: var(--blink-color-1);
+  } /* Return to original color */
+}
